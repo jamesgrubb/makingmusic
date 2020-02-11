@@ -1,0 +1,13 @@
+.trackList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.track {
+  border: 1px solid red;
+  flex: 0 1 20vw;
+  padding: 1em;
+  &__image {
+    width: 100%;
+  }
+}

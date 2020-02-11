@@ -1,0 +1,4 @@
+[build]
+base= "./web/"
+build= "gatsby build"
+publish= "public"

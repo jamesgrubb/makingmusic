@@ -1,0 +1,10 @@
+@mixin button {
+  width: 100%;
+  stroke: var(--primary);
+  stroke-width: 1px;
+  fill: transparent;
+  &:hover,
+  &:active {
+    stroke-width: 3px;
+  }
+}
