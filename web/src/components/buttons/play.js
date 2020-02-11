@@ -6,7 +6,7 @@ export const Play = () => {
   const playPath = "M0 0 L 50 50 L 0 100"
   const pausePath = "M0 0 L0 50 M50 50 L 50 100"
 
-  return <Button className="button" onClick={onclick} path={playPath} />
+  return <Button className="button" path={playPath} />
 }
 
 export default Play
