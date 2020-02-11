@@ -1,0 +1,13 @@
+svg {
+  width: 50%;
+  border-radius: 6px;
+}
+svg path {
+  will-change: transform;
+  stroke-width: 6;
+  transition: d 0.25s;
+  stroke-linecap: round;
+}
+.path {
+  d: path("M5 5 L95 50 M95 50 L5 95");
+}

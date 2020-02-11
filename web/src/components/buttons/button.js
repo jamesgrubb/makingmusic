@@ -1,22 +1,25 @@
 import React from "react"
-import "./play.scss"
+import "./button.scss"
 import PropTypes from "prop-types"
 
 const Button = props => (
   <>
-    <svg
-      onClick={props.handleClick}
-      className={props.className}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0,0,50,100"
-      preserveAspectRatio="none"
-    >
-      <path
-        vector-effect="non-scaling-stroke"
-        className={props.ClassName}
-        d={props.path}
-      />
-    </svg>
+    <div className="track__button">
+      <svg
+        onClick={props.handleClick}
+        className="button"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0,0,100,100"
+        // preserveAspectRatio="none"
+      >
+        <path
+          className="path"
+          stroke="yellow"
+          // vector-effect="non-scaling-stroke"
+          // d={props.path}
+        />
+      </svg>
+    </div>
   </>
 )
 
