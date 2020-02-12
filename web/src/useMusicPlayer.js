@@ -3,8 +3,8 @@ import { MusicPlayerContext } from "./context/MusicPlayerContext"
 
 const useMusicPlayer = () => {
   const [state, setState] = useContext(MusicPlayerContext)
-  console.log("URL from state " + state.tracks[0].node.title)
-  console.log(state.tracks[0])
+
+  console.log(state)
 
   function playTrack(index) {
     if (index === state.currentTrackIndex) {

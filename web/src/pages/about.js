@@ -15,7 +15,6 @@ export const AboutQuery = graphql`
 `
 
 export default ({ data }) => {
-  console.log(data)
   return (
     <React.Fragment>
       {data.allSanityAuthor.edges.map(node => {

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 const MusicPlayerContext = React.createContext([{}, () => {}])
@@ -27,15 +27,20 @@ const MusicPlayerProvider = props => {
 
   const tracks = data.allSanityTrack.edges
 
-  console.log(tracks)
-
   const [state, setState] = useState({
-    audioPlayer: new Audio(),
+    audioPlayer: {},
     tracks: tracks,
     currentTrackIndex: null,
     isPlaying: false,
   })
-
+  useEffect(() => {
+    setState({
+      audioPlayer: new Audio(),
+      tracks: tracks,
+      currentTrackIndex: null,
+      isPlaying: false,
+    })
+  }, [tracks])
   return (
     <MusicPlayerContext.Provider value={[state, setState]}>
       {props.children}
