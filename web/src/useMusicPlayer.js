@@ -5,27 +5,12 @@ const useMusicPlayer = () => {
   const [state, setState] = useContext(MusicPlayerContext)
   console.log("URL from state " + state.tracks[0].node.title)
   console.log(state.tracks[0])
-  function playTrack(index) {
-    console.log(
-      "clicked index " +
-        index +
-        " state.currentTrackIndex " +
-        state.currentTrackIndex
-    )
 
+  function playTrack(index) {
     if (index === state.currentTrackIndex) {
       togglePlay()
     } else {
-      var playPromise = state.audioPlayer.play()
-      if (playPromise !== undefined) {
-        playPromise
-          .then(_ => {
-            state.audioPlayer.pause()
-          })
-          .catch(error => {
-            console.log(error)
-          })
-      }
+      state.audioPlayer.pause()
       state.audioPlayer = new Audio(state.tracks[index].node.url)
       state.audioPlayer.play()
       setState(state => ({
@@ -35,18 +20,10 @@ const useMusicPlayer = () => {
       }))
     }
   }
+
   function togglePlay() {
     if (state.isPlaying) {
-      var playPromise = state.audioPlayer.play()
-      if (playPromise !== undefined) {
-        playPromise
-          .then(_ => {
-            state.audioPlayer.pause()
-          })
-          .catch(error => {
-            console.log(error)
-          })
-      }
+      state.audioPlayer.pause()
     } else {
       state.audioPlayer.play()
     }
