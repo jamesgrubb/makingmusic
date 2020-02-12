@@ -1,7 +1,7 @@
 import React from "react"
 import { MusicPlayerProvider } from "../../context/MusicPlayerContext"
 
-import "./layout.scss"
+import "./styles.scss"
 
 const Layout = ({ children }) => {
   return (
