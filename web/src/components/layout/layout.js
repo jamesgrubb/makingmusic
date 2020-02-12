@@ -1,9 +1,11 @@
 import React from "react"
+import { Link } from "gatsby"
 import { MusicPlayerProvider } from "../../context/MusicPlayerContext"
 
 import "./styles.scss"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, isActive, ...props }) => {
+  console.log({ isActive })
   return (
     <MusicPlayerProvider>
       <div className="container">
@@ -11,8 +13,11 @@ const Layout = ({ children }) => {
           <h1 className="header__title">Rupert Gibson</h1>
           <nav className="header__nav">
             <ul className="header__navItems">
-              <li>about</li>
-              <li>contact</li>
+              <Link to="/about" getProps={isActive} {...props}>
+                about
+              </Link>
+              <Link to="/contact">contact</Link>
+              <Link to="/tracks">music</Link>
             </ul>
           </nav>
         </header>

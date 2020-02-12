@@ -1,7 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Layout from "../components/layout"
 
-export const AboutQuery = graphql`
+export const data = graphql`
   query AboutQuery {
     allSanityAuthor {
       edges {
@@ -15,11 +16,12 @@ export const AboutQuery = graphql`
 `
 
 export default ({ data }) => {
+  console.log(data)
   return (
-    <React.Fragment>
-      {data.allSanityAuthor.edges.map(node => {
-        return <h1>{node.name}</h1>
+    <Layout>
+      {data.allSanityAuthor.edges.map(({ node: author }) => {
+        return <h1>{author.name}</h1>
       })}
-    </React.Fragment>
+    </Layout>
   )
 }
