@@ -1,15 +1,21 @@
 .trackList {
   display: grid;
+  grid-gap: var(--s2);
+  margin-left: var(--s5);
   width: 100%;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 0.65fr));
 }
 
 .track {
-  border: 1px solid red;
-  padding: 1em;
   &__image {
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2),
+      6px 6px 1px rgba(255, 255, 255, 1), 7px 7px 1px rgba(0, 0, 0, 0.2),
+      12px 12px 1px rgba(255, 255, 255, 1), 13px 13px 1px rgba(0, 0, 0, 0.2);
     position: relative;
     width: 100%;
+    margin-bottom: var(--s1);
   }
   &__button {
     appearance: none;
@@ -24,5 +30,8 @@
     align-items: center;
     justify-content: center;
     z-index: 500;
+  }
+  &__title {
+    font-size: var(--font-size-M);
   }
 }

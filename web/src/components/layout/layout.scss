@@ -14,6 +14,7 @@
 
 .container {
   height: 100%;
+  padding: var(--s3);
   display: grid;
   grid-template-columns: max-content 1fr;
   grid-template-rows: auto;
@@ -27,6 +28,7 @@
   height: 100%;
   align-items: center;
   justify-content: space-around;
+
   // transform: rotate(180deg);
   writing-mode: vertical-lr;
 
@@ -35,7 +37,6 @@
   }
   &__nav {
     flex-basis: 50%;
-    background-color: #fff;
   }
   &__navItems {
     color: var(--primary);
