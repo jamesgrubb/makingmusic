@@ -3,7 +3,7 @@ import "./trackList.scss"
 import { MusicPlayerContext } from "../../context/MusicPlayerContext"
 import Duotone from "../duotone"
 import Image from "gatsby-image"
-import Play from "../buttons/play"
+import Button from "../buttons/Button"
 const TrackList = () => {
   const [state, setState] = useContext(MusicPlayerContext)
   return (
@@ -20,7 +20,7 @@ const TrackList = () => {
                     style={{ "--aspect-ratio": 1, filter: "url(#duotone)" }}
                     fluid={track.mainImage.asset.fluid}
                   />
-                  <Play />
+                  <Button />
                 </div>
                 <h2 className="track__title">{track.title}</h2>
               </div>

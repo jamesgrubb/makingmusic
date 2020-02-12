@@ -31,8 +31,7 @@ const MusicPlayerProvider = props => {
 
   const [state, setState] = useState({
     tracks: tracks,
-    playPath: "M0 0 L 50 50 L 0 100",
-    pausePath: "M0 0 L0 50 M50 50 L 50 100",
+    isPlaying: false,
   })
 
   return (

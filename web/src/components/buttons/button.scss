@@ -3,11 +3,25 @@ svg {
   border-radius: 6px;
 }
 svg path {
-  will-change: transform;
+  stroke: yellow;
+  fill: transparent;
   stroke-width: 6;
-  transition: d 0.25s;
+  transition: d 0.15s;
   stroke-linecap: round;
+  stroke-linejoin: round;
 }
-.path {
-  d: path("M5 5 L95 50 M95 50 L5 95");
+.play {
+  d: path("M5 5 L95 50 M95 50 L5 95 L5 5");
+}
+
+.pause {
+  d: path("M40 20 L40 80 M60 20 L60 80 L60 80");
+}
+
+.track__button:hover > svg {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.track__button:hover > svg path {
+  d: path("M40 20 L40 80 M60 20 L60 80 L60 80");
 }

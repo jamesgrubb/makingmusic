@@ -1,12 +1,11 @@
 .trackList {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 .track {
   border: 1px solid red;
-  flex: 0 1 40vw;
-  flex-direction: column;
   padding: 1em;
   &__image {
     position: relative;
@@ -21,11 +20,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    &:hover > svg {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-    &:hover > svg path {
-      d: path("M40 20 L40 80 M60 20 L60 80");
-    }
   }
 }
