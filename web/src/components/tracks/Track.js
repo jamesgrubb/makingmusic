@@ -1,8 +1,11 @@
-import React from "react"
-import { Image } from "gatsby"
+import React, { useContext } from "react"
+import { MusicPlayerContext } from "../../context/MusicPlayerContext"
+import TrackList from "../trackList"
 import "track.scss"
 
-const Track = ({ track, isPlaying }) => {
+const Tracks = ({ tracks }) => {
+  const [state, setState] = useContext(MusicPlayerContext)
+  const tracks = state.tracks
   return (
     <>
       <div className="track">

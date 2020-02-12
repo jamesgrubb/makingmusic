@@ -2,20 +2,19 @@ import React from "react"
 import "./button.scss"
 import PropTypes from "prop-types"
 
-const Button = ({ handleClick }) => {
-  const isPlaying = true
+const Button = ({ handlePlayTrack, isPlaying }) => {
   return (
     <>
       <div className="track__button">
         <svg
-          onClick={handleClick}
+          onClick={handlePlayTrack}
           className="button"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0,0,100,100"
           // preserveAspectRatio="none"
         >
           <path
-            className={isPlaying ? "play" : "pause"}
+            className={isPlaying ? "pause" : "play"}
             // className="pause"
 
             // vector-effect="non-scaling-stroke"

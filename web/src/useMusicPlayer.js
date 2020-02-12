@@ -8,8 +8,21 @@ const useMusicPlayer = () => {
     setState(state => ({ ...state, isPlaying: !state.isPlaying }))
   }
 
+  function playTrack(index) {
+    if (index === state.currentTrackIndex) {
+      togglePlay()
+    } else {
+      setState(state => ({
+        ...state,
+        currentTrackIndex: index,
+        isPlaying: true,
+      }))
+    }
+  }
+
   return {
     togglePlay,
+    playTrack,
   }
 }
 

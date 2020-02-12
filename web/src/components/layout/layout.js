@@ -16,7 +16,7 @@ export default ({ children }) => {
             </ul>
           </nav>
         </header>
-        {children}
+        <mani>{children}</mani>
       </div>
     </MusicPlayerProvider>
   )
