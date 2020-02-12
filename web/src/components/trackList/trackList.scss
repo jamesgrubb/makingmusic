@@ -12,6 +12,9 @@
     width: 100%;
   }
   &__button {
+    appearance: none;
+    background: transparent;
+    border: 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -20,5 +23,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 500;
   }
 }

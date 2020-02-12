@@ -1,34 +1,20 @@
 import React from "react"
 import "./button.scss"
-import PropTypes from "prop-types"
 
-const Button = ({ handlePlayTrack, isPlaying }) => {
+const Button = ({ handlePlayTrack, className }) => {
   return (
     <>
-      <div className="track__button">
+      <button className="track__button" onClick={handlePlayTrack}>
         <svg
-          onClick={handlePlayTrack}
           className="button"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0,0,100,100"
-          // preserveAspectRatio="none"
         >
-          <path
-            className={isPlaying ? "pause" : "play"}
-            // className="pause"
-
-            // vector-effect="non-scaling-stroke"
-            // d={props.path}
-          />
+          <path className={className} />
         </svg>
-      </div>
+      </button>
     </>
   )
 }
 
 export default Button
-
-Button.propTypes = {
-  rest: PropTypes.string.isRequired,
-  handleClick: PropTypes.func.isRequired,
-}

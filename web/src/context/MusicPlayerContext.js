@@ -30,10 +30,10 @@ const MusicPlayerProvider = props => {
   console.log(tracks)
 
   const [state, setState] = useState({
-    audioPlayer = new Audio(),
+    audioPlayer: new Audio(),
     tracks: tracks,
-    isPlaying: false,
     currentTrackIndex: null,
+    isPlaying: false,
   })
 
   return (

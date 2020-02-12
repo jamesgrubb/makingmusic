@@ -3,7 +3,7 @@ import { MusicPlayerProvider } from "../../context/MusicPlayerContext"
 
 import "./layout.scss"
 
-export default ({ children }) => {
+const Layout = ({ children }) => {
   return (
     <MusicPlayerProvider>
       <div className="container">
@@ -16,8 +16,10 @@ export default ({ children }) => {
             </ul>
           </nav>
         </header>
-        <mani>{children}</mani>
+        <main>{children}</main>
       </div>
     </MusicPlayerProvider>
   )
 }
+
+export default Layout

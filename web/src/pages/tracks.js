@@ -1,11 +1,9 @@
-import React, { useContext } from "react"
+import React from "react"
 import Tracklist from "../components/trackList"
-import { MusicPlayerContext } from "../context/MusicPlayerContext"
-import Layout from "../components/layout/Layout"
+
+import Layout from "../components/layout/"
 
 export default () => {
-  const [state, setState] = useContext(MusicPlayerContext)
-  const tracks = state.tracks
   return (
     <React.Fragment>
       <Layout>

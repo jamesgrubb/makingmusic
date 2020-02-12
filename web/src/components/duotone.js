@@ -18,7 +18,7 @@ const Duotone = () => {
               0 0 0 1 0"
           ></feColorMatrix>
 
-          <feComponentTransfer color-interpolation-filters="sRGB">
+          <feComponentTransfer colorInterpolationFilters="sRGB">
             <feFuncR
               type="table"
               tableValues=".996078431  .984313725"
