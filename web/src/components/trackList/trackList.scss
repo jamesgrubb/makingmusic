@@ -7,7 +7,7 @@
 }
 @media (max-width: 20rem) {
   :root {
-    --s2: 1em;
+    --s2: var(--s-1);
   }
 }
 .track {
@@ -20,11 +20,13 @@
     position: relative;
     width: 100%;
     margin-bottom: var(--s1);
+    z-index: 0;
   }
   &__button {
     appearance: none;
-    background: transparent;
+    background: none;
     border: 0;
+    cursor: pointer;
     position: absolute;
     top: 0;
     left: 0;
@@ -34,6 +36,9 @@
     align-items: center;
     justify-content: center;
     z-index: 500;
+    &:focus {
+      outline: 2px solid red;
+    }
   }
   &__title {
     font-size: var(--font-size-M);

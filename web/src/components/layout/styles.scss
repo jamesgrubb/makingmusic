@@ -22,6 +22,7 @@
 }
 
 .header {
+  position: sticky;
   display: flex;
   flex-direction: row;
   grid-row: 1 / -1;
