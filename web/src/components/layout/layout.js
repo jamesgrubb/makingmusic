@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
             </ul>
           </nav>
         </header>
-        <main>{children}</main>
+        <main class="main">{children}</main>
       </div>
     </MusicPlayerProvider>
   )

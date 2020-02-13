@@ -1,6 +1,9 @@
 @import "./aspectRatio";
 @import url("https://fonst.googleapis.com/css?family=IBM+Plex+Sans:300,700&display=swap");
 
+$primary: hsl(224, 100%, 42);
+$secondary: hsl(11, 100%, 93%);
+
 :root {
   --h: 224;
   --s: 100%;
@@ -47,12 +50,13 @@ body {
   font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   line-height: 1.5;
+  background-color: $secondary;
 }
 
 h1,
 h2,
 h3 {
-  color: var(--primary);
+  color: $primary;
   line-height: 1;
 }
 h2 {
