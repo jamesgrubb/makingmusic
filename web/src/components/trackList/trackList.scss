@@ -5,7 +5,11 @@
   width: 100%;
   grid-template-columns: repeat(auto-fill, minmax(200px, 0.65fr));
 }
-
+@media (max-width: 20rem) {
+  :root {
+    --s2: 1em;
+  }
+}
 .track {
   &__image {
     border-radius: 2px;
