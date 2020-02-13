@@ -13,7 +13,7 @@ const Button = ({ handlePlayTrack, className }) => {
           width="100"
           height="100"
         >
-          <path className={className} />
+          <path className={className} d="M5 5 L95 50 M95 50 L5 95 L5 5" />
         </svg>
       </button>
     </>
