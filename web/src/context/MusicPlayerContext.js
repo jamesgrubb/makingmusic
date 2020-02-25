@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-const MusicPlayerContext = React.createContext([{}, () => {}])
+export const MusicPlayerContext = React.createContext([{}, () => {}])
 
 const MusicPlayerProvider = props => {
   const data = useStaticQuery(graphql`
@@ -48,4 +48,4 @@ const MusicPlayerProvider = props => {
   )
 }
 
-export { MusicPlayerContext, MusicPlayerProvider }
+export default MusicPlayerProvider

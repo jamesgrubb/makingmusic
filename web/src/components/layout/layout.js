@@ -1,14 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
-import { MusicPlayerProvider } from "../../context/MusicPlayerContext"
+
 import Seo from "../Seo"
 
 import "./styles.scss"
 
 const Layout = ({ children }) => {
   return (
-    <MusicPlayerProvider>
+    <>
       <Seo title="Sounds Like" />
+
       <div className="container">
         <header className="header">
           <h1 className="header__title">Rupert Gibson</h1>
@@ -28,7 +29,7 @@ const Layout = ({ children }) => {
         </header>
         <main class="main">{children}</main>
       </div>
-    </MusicPlayerProvider>
+    </>
   )
 }
 

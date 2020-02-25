@@ -7,7 +7,7 @@ import Button from "../button/Button"
 const TrackList = () => {
   // const [state, setState] = useContext(MusicPlayerContext)
   const { trackList, currentTrackName, playTrack, isPlaying } = useMusicPlayer()
-
+  console.log(isPlaying)
   return (
     <>
       <div className="trackList">
