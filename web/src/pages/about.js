@@ -16,7 +16,6 @@ export const data = graphql`
 `
 
 export default ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       {data.allSanityAuthor.edges.map(({ node: author }) => {

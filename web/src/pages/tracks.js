@@ -3,7 +3,7 @@ import Tracklist from "../components/trackList"
 
 import Layout from "../components/layout/"
 
-export default () => {
+export default ({ location }) => {
   return (
     <React.Fragment>
       <Layout>

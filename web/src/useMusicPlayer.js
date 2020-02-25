@@ -4,8 +4,6 @@ import { MusicPlayerContext } from "./context/MusicPlayerContext"
 const useMusicPlayer = () => {
   const [state, setState] = useContext(MusicPlayerContext)
 
-  console.log(state)
-
   function playTrack(index) {
     if (index === state.currentTrackIndex) {
       togglePlay()

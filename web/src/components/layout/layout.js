@@ -14,9 +14,15 @@ const Layout = ({ children }) => {
           <h1 className="header__title">Rupert Gibson</h1>
           <nav className="header__nav">
             <ul className="header__navItems">
-              <Link to="/about">about</Link>
-              <Link to="/contact">contact</Link>
-              <Link to="/tracks">music</Link>
+              <Link to="/about" state={{ playing: "stop" }}>
+                about
+              </Link>
+              <Link to="/contact" state={{ playing: "stop" }}>
+                contact
+              </Link>
+              <Link to="/tracks" state={{ playing: "stop" }}>
+                music
+              </Link>
             </ul>
           </nav>
         </header>
